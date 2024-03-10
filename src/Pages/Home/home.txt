@@ -1,0 +1,125 @@
+import PostForm from "../../components/PostForm";
+import Post from "./Post";
+import ProfileCard from "./Profilecard";
+import Sidemenu from "./Sidemenu";
+
+const Home = () => {
+  const companiesData = [
+    {
+      id: 1,
+      name: " Berus Sama  ",
+      photo: "https://i1.sndcdn.com/artworks-000110170507-wr1zet-t500x500.jpg", // Replace with actual photo URL
+      biography: "Lorem ipsum dolor sit amet.",
+    },
+    {
+      id: 2,
+      name: "Vegeta ",
+      photo:
+        "https://openseauserdata.com/files/c5fb8a2895d59faac55222c5f01f3e8d.jpg", // Replace with actual photo URL
+      biography: "Sed do eiusmod tempor incididunt ..",
+    },
+    {
+      id: 3,
+      name: " Broly ",
+      photo:
+        "https://w0.peakpx.com/wallpaper/334/821/HD-wallpaper-saiyan-rage-broly-dbz-dragon-ball-dragon-ball-super-dragon-ball-z.jpg", // Replace with actual photo URL
+      biography: "Ut enim ad minim veniam, ",
+    },
+  ];
+  const posts = [
+    {
+      id: 1,
+      avatar: "https://avatarfiles.alphacoders.com/218/218978.jpg",
+      userName: "Trunks ",
+      privacy: "public",
+      postTitle: "This is a sample post!",
+      postImage:
+        "https://sm.ign.com/t/ign_za/feature/t/the-10-bes/the-10-best-dragon-ball-z-characters_vcm7.1200.jpg",
+      likes: 10,
+      comments: 5,
+      shares: 3,
+      biography: "Sayejins The son of vegeta ",
+    },
+    {
+      id: 2,
+      avatar:
+        "https://animefanfest.com/wp-content/uploads/2022/09/1663352184_335_Dans-Dragon-Ball-Super-Whis-est-un-personnage-presque-totalement.jpg",
+      userName: "Whise ",
+      privacy: "public",
+      postTitle: "this is my New Books about traning ",
+      postImage:
+        "https://goku-shop.fr/cdn/shop/articles/guide_ultime_whis_1.png?v=1610700470",
+      likes: 65,
+      comments: 5,
+      shares: 3,
+      biography: " the coach of goku and vegeta ",
+    },
+  ];
+  return (
+    <div className="grid ml-36 mr-36    grid-cols-6 md:grid-cols-12 gap-4 pt-4 ">
+      <div className="col-span-6 md:col-span-3">
+        <div className="p-4 bg-white rounded-md  shadow-md">
+          <p className="text-center">
+            {" "}
+            <Sidemenu companies={companiesData} />{" "}
+          </p>
+        </div>
+      </div>
+      <div className="col-span-6 md:col-span-6">
+        <div className="p-4 bg-white rounded-md  shadow-md">
+          <PostForm />
+        </div>
+        {posts.map((post) => (
+          <Post key={post.id} {...post} />
+        ))}
+      </div>
+      <div className="col-span-6 md:col-span-3">
+        <ProfileCard />
+      </div>
+    </div>
+  );
+};
+export default Home;
+    
+    ///// profil 
+     <div className="flex justify-evenly">
+          {/* Profile Image */}
+          <img
+            src={userAuth?.profileImage}
+            className="w-40 h-40 rounded-full shadow-lg shadow-violet-200"
+            alt=""
+          />
+
+          {/* User Details */}
+          <div className="p-4 flex flex-col">
+            <span className="font-bold text-2xl">
+              {userAuth?.firstName} {userAuth?.lastName}
+            </span>
+            <span>{userAuth?.biography}</span>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+              magnam laborum
+            </span>
+
+            {/* User Stats */}
+            <div className="flex justify-evenly p-2 font-bold text-2xl">
+              <div className="flex flex-col items-center">
+                <span>10</span> posts
+              </div>
+              <span>12K followers</span>
+              <span>100 follow</span>
+            </div>
+          </div>
+
+          {/* Edit Buttons */}
+          <div className=" flex items-start">
+            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold p-2 rounded inline-flex items-center">
+              <TbUserEdit className="text-2xl" />
+              <span className="pl-1 font-light">Edit Info</span>
+            </button>
+            <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold  p-2 rounded flex items-center">
+              <IoSettingsOutline className="text-2xl" />
+              <span className="pl-1 font-light">Settings</span>
+            </button>
+          </div>
+        </div>
