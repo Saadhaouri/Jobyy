@@ -1,0 +1,15 @@
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\bin\Debug\net8.0\Joby.Domain.deps.json
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\bin\Debug\net8.0\Joby.Domain.runtimeconfig.json
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\bin\Debug\net8.0\Joby.Domain.dll
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\bin\Debug\net8.0\Joby.Domain.pdb
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\Joby.Domain.csproj.AssemblyReference.cache
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\Joby.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\Joby.Domain.AssemblyInfoInputs.cache
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\Joby.Domain.AssemblyInfo.cs
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\Joby.Domain.csproj.CoreCompileInputs.cache
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\Joby.Domain.dll
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\refint\Joby.Domain.dll
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\Joby.Domain.pdb
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\Joby.Domain.genruntimeconfig.cache
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\ref\Joby.Domain.dll
+C:\Users\helal\OneDrive\Bureau\jobyy\Joby\Joby.Domain\obj\Debug\net8.0\Joby.Domain.sourcelink.json

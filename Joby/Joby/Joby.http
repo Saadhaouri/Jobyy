@@ -1,0 +1,6 @@
+@Joby_HostAddress = http://localhost:5001
+
+GET {{Joby_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
