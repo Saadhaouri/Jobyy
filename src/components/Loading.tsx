@@ -6,7 +6,7 @@ const Loading = () => {
       <Flex align="center" gap="middle">
         <Spin size="large" />
       </Flex>
-      <span className=" text-blueColor text-h6 font-bold "> Joby</span>
+      <span className=" text-blueColor text-h6 font-bold "> Joby </span>
     </div>
   );
 };

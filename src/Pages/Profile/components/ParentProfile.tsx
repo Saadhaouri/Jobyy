@@ -1,15 +1,19 @@
-import { Button, Modal, DatePicker, Form, Input, Upload } from "antd";
-import { IoSettingsOutline } from "react-icons/io5";
-import { TbUserEdit } from "react-icons/tb";
-import useUser from "../../../hooks/useUser";
+import { Button, DatePicker, Form, Input, Modal } from "antd";
+import dayjs from "dayjs";
 import { useState } from "react";
 import { Controller, useForm } from "react-hook-form";
-import { UploadOutlined } from "@ant-design/icons";
-import dayjs from "dayjs";
-import UserData from "../../../types/Interfaces/UserData";
+import { IoSettingsOutline } from "react-icons/io5";
+import { TbUserEdit } from "react-icons/tb";
 import { updateUserDetails } from "../../../Services/Api/userApi";
+import useUser from "../../../hooks/useUser";
+import UserData from "../../../types/Interfaces/UserData";
+import { toast } from "react-toastify";
 
-const ParentProfile = () => {
+interface ProfileProps {
+  onSubmitHandler: () => void;
+}
+
+const ParentProfile: React.FC<ProfileProps> = () => {
   const { userAuth } = useUser();
   const [isEditModalVisible, setEditModalVisible] = useState(false);
   const { control, handleSubmit, setValue } = useForm();
@@ -20,23 +24,27 @@ const ParentProfile = () => {
 
   const onSubmitHandler = async (data: UserData) => {
     // Handle form submission
-    // You can implement your logic here to update the user's information
     console.log(data);
+
     if (userAuth && data) {
+      // Update user information
+      userAuth.username = data.username;
       userAuth.firstName = data.firstName;
       userAuth.lastName = data.lastName;
+      userAuth.biography = data.biography;
+      userAuth.dateOfBirth = data.dateOfBirth;
+      userAuth.profileImage = data.profileImage;
 
-      console.log("Experience Updated");
+      console.log("Information Updated");
 
       await updateUserDetails(userAuth.id, userAuth);
-      toast.success("Experience Updated Successfully", {
+      toast.success("Information Updated Successfully", {
         position: "bottom-left",
       });
+
+      // Close the modal after submission
       setEditModalVisible(false);
     }
-
-    // Close the modal after submission
-    setEditModalVisible(false);
   };
 
   return (
@@ -135,14 +143,7 @@ const ParentProfile = () => {
               name="profileImage"
               control={control}
               defaultValue={userAuth.profileImage || ""}
-              render={({ field }) => (
-                <Upload
-                  beforeUpload={() => false}
-                  fileList={field.value ? [{ uid: "1", url: field.value }] : []}
-                >
-                  <Button icon={<UploadOutlined />}>Upload Image</Button>
-                </Upload>
-              )}
+              render={({ field }) => <Input {...field} />}
             />
           </Form.Item>
           <Form.Item>

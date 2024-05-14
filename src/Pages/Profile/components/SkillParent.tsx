@@ -168,7 +168,7 @@ const SkillsParent = () => {
               control={control}
               defaultValue={
                 currentIndex !== null
-                  ? userAuth.skills[currentIndex].description
+                  ? userAuth.skills[currentIndex].Description
                   : ""
               }
               render={({ field }) => <Input.TextArea {...field} />}
